@@ -1,23 +1,23 @@
 {
   "name": "mathrizz",
   "version": "1.0.0",
-  "description": "library with multiple mathematical functions/methods",
+  "description": "Library with multiple mathematical functions/methods",
   "main": "mathrizz.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nick747/MathRizz.git"
+    "url": "https://github.com/nick747/MathRizz.git"
   },
   "keywords": [
-    "[\"maths\"",
-    "\"mathematics\"",
-    "\"calculus\"",
-    "\"algebra\"",
-    "\"geometry\"",
-    "\"numbers\"",
-    "\"functions\"]"
+    "maths",
+    "mathematics",
+    "calculus",
+    "algebra",
+    "geometry",
+    "numbers",
+    "functions"
   ],
   "author": "Nick747",
   "license": "ISC",
