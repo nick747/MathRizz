@@ -623,6 +623,66 @@ let MathRizz = {
       throw new Error("Input must be a number");
     }
   },
+  calcSquareArea: function (l) {
+    if (typeof l === "number") {
+      return MathRizz.power(l, 2);
+    } else {
+      throw new Error("Input must be a number");
+    }
+  },
+  calcSquarePerim: function (l) {
+    if (typeof l === "number") {
+      return l * 4;
+    } else {
+      throw new Error("Input must be a number");
+    }
+  },
+  calcRectArea: function (b, h) {
+    if (typeof b === "number" && typeof h === "number") {
+      return b * h;
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
+  calcRectPerim: function (b, h) {
+    if (typeof b === "number" && typeof h === "number") {
+      return 2 * (b + h);
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
+  calcTriangleArea: function (b, h) {
+    if (typeof b === "number" && typeof h === "number") {
+      return b * h;
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
+  calcTrianglePerim: function (c1, c2, h) {
+    if (
+      typeof c1 === "number" &&
+      typeof c2 === "number" &&
+      typeof h === "number"
+    ) {
+      return c1 + c2 + h;
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
+  calcTriangleCat: function (c, h) {
+    if (typeof c === "number" && typeof h === "number") {
+      return MathRizz.sqrt(MathRizz.power(h, 2) - MathRizz.power(c, 2));
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
+  calcTriangleHyp: function (c1, c2) {
+    if (typeof c1 === "number" && typeof c2 === "number") {
+      return MathRizz.sqrt(MathRizz.power(c1, 2) + MathRizz.power(c2, 2));
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
 };
 
 module.exports = MathRizz;
