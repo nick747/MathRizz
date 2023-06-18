@@ -397,3 +397,5 @@ let MathRizz = {
     return num / den;
   },
 };
+
+module.exports = MathRizz;
