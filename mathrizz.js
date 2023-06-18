@@ -607,6 +607,22 @@ let MathRizz = {
       throw new Error("Inputs must be numbers");
     }
   },
+
+  // GEOMETRY
+  calcCircleArea: function (r) {
+    if (typeof r === "number") {
+      return Math.PI * MathRizz.power(r, 2);
+    } else {
+      throw new Error("Input must be a number");
+    }
+  },
+  calcCircumference: function (r) {
+    if (typeof r === "number") {
+      return 2 * Math.PI * r;
+    } else {
+      throw new Error("Input must be a number");
+    }
+  },
 };
 
 module.exports = MathRizz;
