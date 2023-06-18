@@ -114,7 +114,7 @@ The library provides the following mathematical functions/methods:
 - `calcTrapezeArea(B, b, h)`: Returns the area of a trapeze given the two bases and the height.
 - `calcTrapezePerim(B, b, l)`: Returns the perimeter of a trapeze given the two bases and the oblique side.
 - `calcTriangleArea(b, h)`: Returns the area of a triangle given the base and the height.
-- `calcTrianglePerim(b, h)`: Returns the perimeter of a triangle given the base and the height.
+- `calcTrianglePerim(c1, c2, h)`: Returns the perimeter of a triangle given the two cathetuses and the hypotenuse.
 - `calcTriangleCat(c, h)`: Returns the cathetus of a triangle given the other cathetus and the hypotenuse.
 - `calcTriangleHyp(c1, c2)`: Returns the hypotenuse of a triangle given the two cathetuses.
 
