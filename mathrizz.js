@@ -651,6 +651,28 @@ let MathRizz = {
       throw new Error("Inputs must be numbers");
     }
   },
+  calcTrapezeArea: function (B, b, h) {
+    if (
+      typeof B === "number" &&
+      typeof b === "number" &&
+      typeof h === "number"
+    ) {
+      return ((B + b) * h) / 2;
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
+  calcTrapezePerim: function (B, b, l) {
+    if (
+      typeof B === "number" &&
+      typeof b === "number" &&
+      typeof l === "number"
+    ) {
+      return B + b + 2 * l;
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
   calcTriangleArea: function (b, h) {
     if (typeof b === "number" && typeof h === "number") {
       return b * h;
