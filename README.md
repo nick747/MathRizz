@@ -104,5 +104,19 @@ The library provides the following mathematical functions/methods:
 - `permutations(n, k)`: Returns the number of permutations of n objects taken k at a time.
 - `combinations(n, k)`: Returns the number of combinations of n objects taken k at a time.
 
+### Geometry
+- `calcCircleArea(r)`: Returns the area of a circle given the ray.
+- `calcCircumference(r)`: Returns the circumference of a circle given the ray.
+- `calcSquareArea(l)`: Returns the area of a square given the side.
+- `calcSquarePerim(l)`: Returns the perimeter of a square given the side.
+- `calcRectArea(b, h)`: Returns the area of a rectangle given the base and the height.
+- `calcRectPerim(b, h)`: Returns the perimeter of a rectangle given the base and the height.
+- `calcTrapezeArea(B, b, h)`: Returns the area of a trapeze given the two bases and the height.
+- `calcTrapezePerim(B, b, l)`: Returns the perimeter of a trapeze given the two bases and the oblique side.
+- `calcTriangleArea(b, h)`: Returns the area of a triangle given the base and the height.
+- `calcTrianglePerim(b, h)`: Returns the perimeter of a triangle given the base and the height.
+- `calcTriangleCat(c, h)`: Returns the cathetus of a triangle given the other cathetus and the hypotenuse.
+- `calcTriangleHyp(c1, c2)`: Returns the hypotenuse of a triangle given the two cathetuses.
+
 ### Contributing: <br />
 If you wish to contribute to the creation of this library, feel free to do so by opening an issue on the connected GitHub page
