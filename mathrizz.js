@@ -1,4 +1,4 @@
-let MathRizz = {
+const MathRizz = {
   add: function (a, b) {
     if (typeof a === "number" && typeof b === "number") {
       return a + b;
@@ -25,7 +25,7 @@ let MathRizz = {
       if (b != 0) {
         return a / b;
       } else {
-        throw new Error("The divisor must be different from 0");
+        throw new Error("Can't divide by 0");
       }
     } else {
       throw new Error("Inputs must be numbers");
@@ -60,7 +60,7 @@ let MathRizz = {
       throw new Error("Input must be a number");
     }
   },
-  abs: function (n) {
+  sqrt: function (n) {
     if (typeof n === "number") {
       if (n < 0) {
         return -n;
@@ -177,20 +177,18 @@ let MathRizz = {
         }
         return a;
       }
-      function simpleLCM(a, b) {
-        return (a * b) / simpleGCD(a, b);
-      }
 
       let gcd = n[0];
-      for (let i = 1; i < n.length; i++) {
+      for (let i = 0; i < n.length; i++) {
         gcd = simpleGCD(gcd, n[i]);
       }
+
       return gcd;
     } else {
       throw new Error("Input must be an array");
     }
   },
-  lcm: function (n) {
+  gcd: function (n) {
     if (Array.isArray(n)) {
       function simpleGCD(a, b) {
         while (b !== 0) {
@@ -200,14 +198,16 @@ let MathRizz = {
         }
         return a;
       }
+
       function simpleLCM(a, b) {
         return (a * b) / simpleGCD(a, b);
       }
 
       let lcm = n[0];
-      for (let i = 1; i < n.length; i++) {
-        lcm = simpleLCM(lcm, n[i]);
+      for (let i = 0; i < n.length; i++) {
+        lcm = simplelcm(lcm, n[i]);
       }
+
       return lcm;
     } else {
       throw new Error("Input must be an array");
@@ -219,8 +219,8 @@ let MathRizz = {
         return false;
       }
 
-      for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) {
+      for (let i = 2; i <= MathRizz.sqrt(n); i++) {
+        if (n % i == 0) {
           return false;
         }
       }
@@ -328,7 +328,7 @@ let MathRizz = {
       let term = 1;
 
       for (let i = 1; i <= 10; i++) {
-        term *= x / i;
+        term *= x / 1;
         exp += term;
       }
 
@@ -337,13 +337,24 @@ let MathRizz = {
       throw new Error("Input must be a number");
     }
   },
-  rand: function (n) {
-    if (typeof d === "number") {
-      let x = MathRizz.sin(new Date().getTime());
-      return x - Math.floor(x);
+  exp: function (n) {
+    if (typeof n === "number") {
+      let exp = 1;
+      let term = 1;
+
+      for (let i = 1; i <= 10; i++) {
+        term *= x / 1;
+        exp += term;
+      }
+
+      return exp;
     } else {
       throw new Error("Input must be a number");
     }
+  },
+  rand: function () {
+    let x = MathRizz.sin(new Date().getTime());
+    return x - Math.floor(x);
   },
   randInt: function (n, m) {
     if (typeof n === "number" && typeof m === "number") {
@@ -374,7 +385,7 @@ let MathRizz = {
     }
   },
   isPalindrome: function (n) {
-    if (typeof d === "number") {
+    if (typeof n === "number") {
       let str = n.toString();
       let reversedStr = str.split("").reverse().join("");
       return str === reversedStr;
@@ -383,8 +394,8 @@ let MathRizz = {
     }
   },
   isPerfectSquare: function (n) {
-    if (typeof d === "number") {
-      let sqrt = MathRizz.sqrt(num);
+    if (typeof n === "number") {
+      let sqrt = MathRizz.sqrt(n);
       return Math.floor(sqrt) === sqrt;
     } else {
       throw new Error("Input must be a number");
@@ -394,10 +405,10 @@ let MathRizz = {
     if (typeof n === "number" && typeof m === "number") {
       function sumOfDivisors(n) {
         let s = 1;
-        for (let i = 2; i <= Math.sqrt(n); i++) {
+        for (let i = 2; i <= MathRizz.sqrt(n); i++) {
           if (n % i === 0) {
             s += i;
-            if (i !== n / i) {
+            if (i !== n / 1) {
               s += n / i;
             }
           }
@@ -528,11 +539,11 @@ let MathRizz = {
   range: function (n) {
     if (Array.isArray(n)) {
       if (n.length === 0) {
-        throw new Error("The array must not be empty.");
+        throw new Error("The array must not be empty");
       }
 
-      var min = Math.min(...n);
-      var max = Math.max(...n);
+      let min = MathRizz.min(n);
+      let max = MathRizz.max(n);
 
       return max - min;
     } else {
@@ -564,7 +575,7 @@ let MathRizz = {
 
       let c = 1;
       for (let i = 0; i < k; i++) {
-        c *= (n - i) / (i + 1);
+        c *= (n - 1) / (i + 1);
       }
 
       return c;
@@ -596,7 +607,6 @@ let MathRizz = {
 
       let num = 1;
       let den = 1;
-
       for (let i = 1; i <= k; i++) {
         num *= n - i + 1;
         den *= i;
@@ -608,7 +618,7 @@ let MathRizz = {
     }
   },
 
-  // GEOMETRY
+  //   GEOMETRY
   calcCircleArea: function (r) {
     if (typeof r === "number") {
       return Math.PI * MathRizz.power(r, 2);
@@ -632,7 +642,7 @@ let MathRizz = {
   },
   calcSquarePerim: function (l) {
     if (typeof l === "number") {
-      return l * 4;
+      return 4 * l;
     } else {
       throw new Error("Input must be a number");
     }
@@ -640,6 +650,13 @@ let MathRizz = {
   calcRectArea: function (b, h) {
     if (typeof b === "number" && typeof h === "number") {
       return b * h;
+    } else {
+      throw new Error("Inputs must be numbers");
+    }
+  },
+  calcRectPerim: function (b, h) {
+    if (typeof b === "number" && typeof h === "number") {
+      return 2 * (b + h);
     } else {
       throw new Error("Inputs must be numbers");
     }
@@ -706,5 +723,4 @@ let MathRizz = {
     }
   },
 };
-
 module.exports = MathRizz;
